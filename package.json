@@ -7,13 +7,17 @@
     "start": "node server.js",
     "lint": "eslint **/*.js --quiet",
     "fix": "eslint --fix .",
-    "test": "npm run lint && NODE_ENV=test mocha -u tdd --reporter spec --exit"
+    "test": "mocha",
+    "test2": "npm run lint && NODE_ENV=test mocha -u tdd --reporter spec --exit",
+    "test:browser": "live-server --port=9000 --mount=/:test/front"
   },
   "license": "ISC",
   "dependencies": {
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
+    "fs": "^0.0.1-security",
+    "live-server": "^1.2.1",
     "mysql2": "^1.5.3",
     "sequelize": "^4.38.0"
   },

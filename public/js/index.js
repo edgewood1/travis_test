@@ -82,6 +82,16 @@ var handleFormSubmit = function(event) {
   $exampleDescription.val("");
 };
 
+function testing(input) {
+  if (input < 5) {
+    return "low";
+  } else if (input >= 5) {
+    return "hi";
+  } else if (input !== /^[0-9]$/) {
+    return "enter a letter";
+  }
+}
+
 // handleDeleteBtnClick is called when an example's delete button is clicked
 // Remove the example from the db and refresh the list
 var handleDeleteBtnClick = function() {
