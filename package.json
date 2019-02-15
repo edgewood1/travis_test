@@ -7,7 +7,8 @@
     "start": "node server.js",
     "lint": "eslint **/*.js --quiet",
     "fix": "eslint --fix .",
-    "test": "mocha",
+    "test": "mocha && live-server --port=9000 --mount=/:test/front",
+    "test1": "mocha",
     "test2": "npm run lint && NODE_ENV=test mocha -u tdd --reporter spec --exit",
     "test:browser": "live-server --port=9000 --mount=/:test/front"
   },
