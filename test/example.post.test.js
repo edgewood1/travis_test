@@ -14,6 +14,7 @@ describe("POST /api/examples", function() {
   // & delete all examples from the db
   beforeEach(function() {
     request = chai.request(server);
+    // sequelize will sync the models with the database and afterwards start the server.
     return db.sequelize.sync({ force: true });
   });
 
@@ -37,7 +38,7 @@ describe("POST /api/examples", function() {
         expect(err).to.be.null;
 
         expect(responseStatus).to.equal(200);
-
+        console.log("response! -- ", responseBody);
         expect(responseBody)
           .to.be.an("object")
           .that.includes(reqBody);
