@@ -7,9 +7,10 @@
     "start": "node server.js",
     "lint": "eslint **/*.js --quiet",
     "fix": "eslint --fix .",
-    "test": "mocha && live-server --port=9000 --mount=/:test/front",
-    "test1": "mocha",
+    "test1": "mocha && live-server --port=9000 --mount=/:test/front",
+    "test": "mocha",
     "test2": "npm run lint && NODE_ENV=test mocha -u tdd --reporter spec --exit",
+    "test3": "d",
     "test:browser": "live-server --port=9000 --mount=/:test/front"
   },
   "license": "ISC",
@@ -24,7 +25,7 @@
   },
   "devDependencies": {
     "chai": "^4.1.2",
-    "chai-http": "^4.0.0",
+    "chai-http": "^4.2.1",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.2",
